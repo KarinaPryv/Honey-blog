@@ -28,7 +28,7 @@ export const LogoutButton = () => {
                     <span>{translate('logOut')}</span>
                 </button>
             )}
-            clientId={process.env.REACT_APP_CLIENT_ID}
+            clientId={'456524211914-kgbjsr02bhnrcisdfvkek8tm9ondvt9b.apps.googleusercontent.com'}
             onLogoutSuccess={onLogoutSuccess}
         />
     )
