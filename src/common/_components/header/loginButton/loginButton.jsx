@@ -16,12 +16,12 @@ export const LoginButton = () => {
     useEffect(() => {
         gapi.load('client:auth2', () => {
             gapi.auth2.init({
-                clientId: process.env.REACT_APP_CLIENT_ID,
+                clientId: '456524211914-kgbjsr02bhnrcisdfvkek8tm9ondvt9b.apps.googleusercontent.com',
                 scope: 'https://www.googleapis.com/auth/blogger'
             });
         })
     }, []);
-
+   
     const onSuccess = response => {
         dispatch(setUser(response.profileObj));
         localStorage.setItem('user', JSON.stringify(response.profileObj));
@@ -41,7 +41,7 @@ export const LoginButton = () => {
                     <span>{translate('logIn')}</span>
                 </button>
             )}
-            clientId={process.env.REACT_APP_CLIENT_ID}
+            clientId={'456524211914-kgbjsr02bhnrcisdfvkek8tm9ondvt9b.apps.googleusercontent.com'}
             onSuccess={onSuccess}
             onFailure={onFailure}
         />
