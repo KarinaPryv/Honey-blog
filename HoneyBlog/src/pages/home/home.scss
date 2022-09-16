@@ -1,0 +1,272 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.dark {
+    .muted-container {
+        background-color: rgba(25, 13, 5, 0.9);
+    }
+
+    h2,
+    h3 {
+        color: $dark-text-color;
+    }
+}
+
+section {
+    padding: 50px;
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+h2 {
+    margin-top: 15px;
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 58px;
+}
+
+.introduction-block {
+    height: 100vh;
+    background-image: url('../../assets/images/honeycombs-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 130px;
+}
+
+.muted-container {
+    @include flex-center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgb(253, 243, 186, 0.850);
+    flex-direction: column;
+    text-align: center;
+
+    .square-large {
+        left: 50px;
+        top: 50px;
+    }
+
+    .square-small {
+        left: 130px;
+        top: 30px;
+    }
+}
+
+.introduction-block-info {
+    width: 500px;
+}
+
+.square-large {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    background-color: $accent-color;
+    position: absolute;
+}
+
+.square-small {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: rgb(255, 180, 49);
+    position: absolute;
+}
+
+.steps-block {
+    padding: 100px 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.steps-block-description {
+    padding-right: 20px;
+    width: 32%;
+    position: relative;
+
+    .square-large {
+        bottom: -30px;
+    }
+
+    .square-small {
+        bottom: 20px;
+        left: 150px;
+    }
+
+    h3 {
+        &:hover {
+            color: $accent-color
+        }
+    }
+}
+
+.steps-block-progress {
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: $dark-bg-color;
+    width: 67%;
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 991px) {
+    h3 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .steps-block {
+        padding: 50px;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .steps-block-description {
+        width: 100%;
+
+        h2 {
+            font-size: 44px;
+        }
+
+        .square-large {
+            right: 0;
+            bottom: auto;
+            top: 0px;
+        }
+
+        .square-small {
+            bottom: 0px;
+            right: 70px;
+            left: auto;
+        }
+    }
+
+    .steps-block-progress {
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section {
+        padding: 30px;
+    }
+
+    .introduction-block {
+        padding-top: 110px;
+    }
+
+    .muted-container {
+        padding: 10px;
+
+        .square-large {
+            left: 30px;
+            top: 30px;
+        }
+    }
+
+    .square-large {
+        width: 90px;
+        height: 90px;
+    }
+
+    .square-small {
+        width: 60px;
+        height: 60px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    .introduction-block-info {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .steps-block {
+        padding: 20px;
+        padding-bottom: 150px;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .steps-block-description {
+        width: 100%;
+        position: static;
+
+        h2 {
+            font-size: 34px;
+            max-width: 420px !important;
+        }
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        .square-large {
+            right: 20px;
+            top: auto;
+            bottom: 40px;
+        }
+
+        .square-small {
+            bottom: 40px;
+            right: 130px;
+        }
+    }
+
+    .steps-block-progress {
+        width: 100%;
+        margin: 20px 0 0 0;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .muted-container {
+        padding-top: 100px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .introduction-block {
+        padding-top: 95px;
+    }
+
+    .introduction-block-info {
+        line-height: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 34px;
+    }
+}

@@ -1,0 +1,29 @@
+.errorBlock {
+    background-color: rgba(255, 103, 48, 0.491);
+    padding: 40px 50px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 60%;
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .errorBlock {
+        padding: 10px;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}

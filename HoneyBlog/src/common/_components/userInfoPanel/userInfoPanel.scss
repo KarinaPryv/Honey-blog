@@ -1,0 +1,90 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.ant-drawer-right .ant-drawer-content-wrapper {
+    top: 80px;
+    width: 25% !important;
+    background-color: $dark-bg-color;
+    color: $dark-text-color;
+}
+
+.ant-drawer-content {
+    background-color: $dark-bg-color;
+    color: $dark-text-color;
+}
+
+.ant-drawer-header {
+    border-bottom: 1px solid orange;
+    background-color: orange;
+    color: $dark-text-color;
+
+    .ant-drawer-title,
+    .ant-drawer-close {
+        color: $light-text-color;
+        text-align: center;
+    }
+}
+
+.ant-drawer-header-title {
+    padding: 10px 0;
+}
+
+.ant-avatar-circle:hover {
+    cursor: pointer;
+}
+
+.user-info-block {
+    flex-direction: column;
+    @include flex-center;
+
+    p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .ant-avatar {
+        margin: 10px 0 20px;
+    }
+
+    span {
+        margin: 15px;
+        font-size: 18px;
+    }
+
+    .login-btn {
+        border-width: 2px;
+        margin-top: 10px;
+
+        span {
+            color: $title-color;
+        }
+
+        &:hover {
+            span {
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .ant-drawer-right .ant-drawer-content-wrapper {
+        width: 35% !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ant-drawer-right .ant-drawer-content-wrapper {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .ant-drawer-right .ant-drawer-content-wrapper {
+        width: 100% !important;
+    }
+
+    .ant-drawer-body {
+        margin-top: 50px;
+    }
+}

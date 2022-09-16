@@ -1,0 +1,182 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.dark {
+    .capital-letter {
+        border: 2px solid $title-color;
+
+        span {
+            color: $title-color;
+        }
+    }
+
+    .avatar-icon,
+    .comment-icon {
+        color: $title-color;
+    }
+
+    .post-container {
+        &:hover {
+            box-shadow: 0px 0px 10px rgb(12, 12, 12);
+        }
+
+        .text-muted {
+            color: rgb(56, 56, 56) !important;
+        }
+    }
+}
+
+.post-container {
+    width: 100%;
+    min-height: 90px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: $card-bg-color;
+    padding: 15px;
+    display: flex;
+
+    p {
+        font-size: 16px;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 7px rgb(83, 83, 83);
+    }
+}
+
+.capital-letter {
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    border: 2px solid $accent-color;
+    @include flex-center;
+
+    span {
+        font-size: 60px;
+        font-family: monospace;
+        color: $accent-color;
+    }
+}
+
+.post-body {
+    width: calc(100% - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-inner {
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+
+    h5 {
+        display: block;
+        margin-bottom: 0;
+        font-size: 17px;
+    }
+
+    .post-title {
+        max-width: 80%;
+        font-size: 20px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .text-muted {
+        color: rgb(102, 102, 102) !important;
+        font-weight: 400;
+    }
+}
+
+.avatar-icon,
+.comment-icon {
+    margin-top: 1px;
+    font-size: 17px;
+    margin-left: 5px;
+    color: $accent-color;
+}
+
+.comment-icon {
+    font-size: 13px;
+    margin: 3px 0 0 3px;
+}
+
+.post-edit-block {
+    margin-right: -10px;
+    font-size: 16px;
+    display: flex;
+
+    .edit-icon {
+        width: 30px;
+        height: 30px;
+        margin: 1px 3px;
+        padding-top: 2px;
+        border-radius: 50%;
+        color: $light-text-color;
+        font-size: 16px;
+
+        &:hover {
+            background-color: rgba(255, 115, 0, 0.366);
+            cursor: pointer;
+            transition: 400ms;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .capital-letter {
+        width: 60px;
+        height: 65px;
+
+        span {
+            font-size: 48px;
+        }
+    }
+
+    .post-inner-bottom {
+        span {
+            display: none;
+        }
+    }
+
+    .post-inner {
+        h5 {
+            display: block;
+            margin-bottom: 0;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .post-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .text-muted {
+            font-weight: 400;
+        }
+    }
+
+    .comment-icon {
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+    .avatar-icon {
+        display: none;
+    }
+
+    .post-edit-block {
+        .edit-icon {
+            width: 25px;
+            height: 25px;
+            margin: 0px 2px;
+            font-size: 14px;
+        }
+    }
+}

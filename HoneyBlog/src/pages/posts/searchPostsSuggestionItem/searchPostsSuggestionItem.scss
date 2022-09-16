@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+
+.dark {
+    .posts-suggestions-block {
+        background-color: $dark-bg-color;
+        box-shadow: 0px 5px 8px rgb(16, 16, 16);
+
+        span {
+            color: $dark-text-color;
+            font-weight: 200;
+        }
+    }
+
+    .text-muted {
+        color: $dark-muted-text-color !important;
+    }
+}
+
+.posts-suggestions-block {
+    position: absolute;
+    border: 2px solid orange;
+    top: 38px;
+    border-radius: 6px;
+    width: 100%;
+    background-color: $light-bg-color;
+    box-shadow: 0px 5px 8px rgba(96, 96, 96, 0.729);
+    padding: 5px;
+
+    span {
+        font-size: 16px;
+        color: $light-text-color;
+    }
+
+    li {
+        padding: 5px 10px;
+        border-radius: 5px;
+        min-height: 26px;
+        justify-content: space-between;
+
+        &:hover {
+            cursor: pointer;
+            background: rgba(219, 124, 22, 0.450);
+        }
+    }
+
+    i {
+        font-size: 15px;
+        margin-right: 7px;
+    }
+}
+
+.text-muted {
+    color: $light-muted-text-color  !important;
+}
