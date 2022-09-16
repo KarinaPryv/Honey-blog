@@ -35,6 +35,10 @@ header {
 
 .title-sm-wrapper {
     display: none;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .title-sm {
