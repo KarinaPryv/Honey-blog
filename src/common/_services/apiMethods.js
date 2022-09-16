@@ -4,14 +4,14 @@ const baseUrl = 'https://www.googleapis.com/blogger/v3';
 const SELF_BLOGS = "/users/self/blogs";
 const BLOGS_ENDPOINT = "/blogs";
 const POSTS_ENDPOINT = "/posts";
-const API_KEY = "AIzaSyCmL01pEYb0LP5NShDvoXVGJzutWlVwKPI"
+const API_KEY = "AIzaSyCmL01pEYb0LP5NShDvoXVGJzutWlVwKPI";
 
 export const getBlogsByUser = () => {
     return axios.get(`${baseUrl}${SELF_BLOGS}?key=${process.env.REACT_APP_API_KEY}`);
 }
 
 export const getPostsByBlogId = (blogId) => {
-    return axios.get(`${baseUrl}${BLOGS_ENDPOINT}/${blogId}${POSTS_ENDPOINT}?key=${API_KEY}&maxResults=100`);
+    return axios.get(`${baseUrl}${BLOGS_ENDPOINT}/${blogId}${POSTS_ENDPOINT}?key=AIzaSyCmL01pEYb0LP5NShDvoXVGJzutWlVwKPI&maxResults=100`);
 }
 
 export const getPostById = (blogId, postId) => {
