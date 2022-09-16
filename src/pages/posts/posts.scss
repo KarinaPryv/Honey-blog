@@ -1,0 +1,30 @@
+.add-post-btn {
+    width: max-content;
+    height: 40px;
+    padding: 5px 15px;
+    border: 2px solid orange;
+}
+
+.posts-container {
+    min-height: calc(100vh - 390px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+    .posts-container {
+        min-height: calc(100vh - 380px);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .add-post-btn {
+        font-size: 14px;
+        padding: 5px 7px;
+    }
+
+    .posts-container {
+        min-height: calc(100vh - 300px);
+    }
+}
